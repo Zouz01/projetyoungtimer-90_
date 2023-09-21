@@ -1,0 +1,234 @@
+body{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'inter-regular';
+    background-color:#5A85F5;
+}
+#section-1{
+    text-align:center;
+}
+.barre-navigatrice{
+    position:initial;
+}
+.header:not(header){background: #D9D9D9}
+.header h1{
+    text-transform:none;
+}
+.header h2{
+    text-transform:none;
+}
+
+/*##### MISE EN FORME DES IMAGES DU HAUT DE PAGE #####*/
+
+
+.all-img{
+    display:flex;
+    flex-flow:column wrap;
+    align-items:center;
+    width:75%;
+    margin:0 auto;
+}
+.all-img * div:not(.logo-205-gti *, .logo-205-gti){
+    width:75%;
+}
+.logo-peugeot img{
+    width:100%;
+    padding-right:100px;
+}
+        /* ALIGNEMENT DES LOGO PEUGEOT ET 205+GTI */
+.img-inline{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+        /* LOGO 205 ET LOGO GTI */
+.logo-205-gti{
+    margin: 0 auto;
+    line-height:50px;
+    width:100%
+}
+.logo-205-gti div{
+    margin:auto;
+}
+.logo-205-gti *{
+    width:100%;
+}
+.img-voiture,.img-voiture img{
+    width:100%;
+    border-radius: 20px;
+}
+        /* MISE EN FORME DU TEXTE ET DES ARTICLES */
+section h1{
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    font-size: 28px;
+    color:#000;
+}
+h2 {
+
+    text-align: center;
+    text-transform: uppercase;
+}
+article{
+    font-size: 20px;
+    margin:0 auto;
+    width:75%;
+}
+video{
+    position: relative;
+    border-radius: 20px;
+    color: white;
+    border: 20px  solid rgba(233, 15, 15, 0.35);
+    transition: all .4s ease;
+    width:75%
+}
+
+video:hover {
+    border-radius: 50% 50%  / 5% 5% ;
+    border: 10px solid rgba(233,15,15,.65);
+}
+
+/*##### MISE EN FORME DU TABLEAU #####*/
+
+table{
+    margin:0 auto;
+    width:75%;
+}
+th, td {
+  border:4px solid #fff;
+  border-collapse: collapse;
+  color:#fff;
+}
+thead{
+    border:none;
+}
+thead tr{
+    width:100%;
+    border:none;
+}
+tbody{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+    border-radius:20px;
+}
+
+th{
+    border-radius:20px;
+    background-color:#D31919;
+    text-transform:uppercase;
+    width:100%;
+}
+tr{
+    display:flex;
+    flex-flow:column wrap;
+    width:25%;
+    border-radius: 20px;
+}
+td{
+    background-color:#F55A5A;
+    text-align:center;
+    width:100%;
+}
+td:not(:first-child){
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 15em;
+    font-weight:500;
+}
+td:first-child{
+    padding:10px 0;
+    font-family:inter-bold, sans-serif;
+    text-transform:uppercase
+}
+.titre-caracteristiques{
+    font-size: 36px;
+    font-family:inter-bold, sans-serif;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    text-align: center;
+}
+.voiture-table{
+    border-radius:20px;
+}
+.border-top-left{
+    border-top-left-radius:20px;
+}
+.border-bottom-left{
+    border-bottom-left-radius:20px;
+}
+.border-top-right{
+    border-top-right-radius:20px;
+}
+.border-bottom-right{
+    border-bottom-right-radius:20px;
+}
+
+@media screen and (max-width:425px){
+    body{
+        font-size:10px;
+    }
+    .slider{
+        margin-bottom: 0;
+    }
+    .titre h1{
+        text-align:left;
+        font-size:2em;
+    }
+    .titre h2{
+        text-align:left;
+        font-size:1.5em;
+    }
+    .img-inline{
+        flex-flow: column wrap;
+    }
+    section article {
+        font-size:14px;
+    }
+    section article h1{
+        font-size: 18px;
+    }
+    .titre-caracteristiques{
+        font-size:10px;
+    }
+    #section-2{
+        display:flex;
+        
+    }
+    table{
+        width:100%;
+    }
+    tbody{
+        flex-flow:column wrap;
+    }
+    tr {
+        flex-flow:row nowrap;
+        align-items:center;
+        width:initial;
+    }
+    td{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+        height:13.2em;
+    }
+    .border-bottom-left{
+        border-bottom-left-radius: 0;
+    }
+    
+    .border-top-right{
+        border-top-right-radius: 0;
+    }
+    .border-right{
+        border-bottom-right-radius:20px;
+        border-top-right-radius:20px;
+    }
+    .border-left{
+        border-bottom-left-radius:20px;
+        border-top-left-radius:20px;
+    }
+}

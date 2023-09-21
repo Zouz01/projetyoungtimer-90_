@@ -1,0 +1,117 @@
+body{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body section{
+    display:flex;
+    flex-flow:row wrap;
+}
+section article{
+    display:flex;
+    flex-flow:column wrap;
+    justify-content:center;
+    align-items: center;
+    width:33%;
+}
+article figure img{
+    border-radius:20px;
+    width:100%;
+}
+
+article figure{
+    transition: 0.5s;
+}
+article figure :hover{
+    transform:scale(1.1)
+}
+article figcaption p{
+    display:none;
+}
+
+/* bouton pour afficher/masquer le texte de description*/
+label.btn-text:hover{cursor:pointer;}
+input.btn-text:hover{cursor:pointer;}
+
+input[type='checkbox'].btn-text {
+    position:absolute;
+    opacity:0;
+    width:25px;
+    height:25px;
+}
+
+input.btn-text:checked~p.hide{
+    display:flex;
+    flex-flow:column wrap;
+    text-align:center;
+    animation-name:apparition;
+    animation-duration:0.5s;
+
+}
+@keyframes apparition{
+    from{
+        opacity:0;
+        transform:translateY(100px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+.btn-text{
+    text-align:center;
+}
+
+
+.btn-text:hover img {
+    animation: logo-animation 0.5s ease-in;
+}
+
+@keyframes logo-animation {
+    20% {
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.conteneur-golf-gti .btn-text{
+    background-color:#9197A1
+}
+.conteneur-gt-turbo{
+    background-color:#5A85F5;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}
+.conteneur-gt-turbo figure img{
+    margin:10px 0;
+}
+
+.conteneur-golf-gti{
+    background-color:#9197A1;
+}
+.conteneur-205-gti{
+    background-color:#5A85f5;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+.conteneur-205-gti figure img{
+    margin:30px 0;
+}
+
+/* #####  RESPONSIVE ###### */

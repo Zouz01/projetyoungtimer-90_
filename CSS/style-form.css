@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:inter-medium, sans-serif
+}
+header div, body, footer{
+    background:#fff
+  }
+
+  /*********HEADER****/
+.barre-navigatrice{
+    position:initial;
+}
+.header:not(header){background: #D9D9D9}
+.header h1{
+    text-transform:none;
+}
+.header h2{
+    text-transform:none;
+}
+header .nav{
+    background-color:rgba(0, 0, 0, 1);
+
+    border-radius:20px;
+}
+.header .nav ul li a{
+    color:greenyellow
+}
+
+main{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-around;
+}
+section {
+    width:45%;
+    border-radius:20px;
+    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
+    margin-top:12px;
+}
+#section-1{
+    background-color: #8DC1D7;
+    padding-left:6px;
+}
+#section-2{
+    background:url("../image-voiture-commun/rassemblement-defilant-2-transformed.png") no-repeat;
+    background-size:cover;
+    height:600px;
+    margin-top:50px;
+}
+section h1{
+    text-align:center;
+    text-decoration:underline;
+    font-weight: 600;
+    font-size: 32px;
+    font-family:inter-bold, sans-serif;
+    color:#000;
+}
+h5{
+
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration:underline;
+    opacity:50%;
+}
+form{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+}
+form div:not(:last-child){
+    margin-bottom: 25px;
+}
+form input:not(.conteneur-info-voiture input) {
+    font-family:inter-bold, sans-serif;
+    font-style:italic;
+}
+.conteneur-nom, .conteneur-prenom{
+    display:inline-block;
+    width:40%;
+    margin-right:20px;
+}
+.conteneur-nom input, .conteneur-prenom input {
+    width:100%;
+}
+.conteneur-mail label{
+    margin-right:10px;
+}
+.conteneur-mail input, .conteneur-telephone input{
+    width:50%;
+}
+.conteneur-btn-inscription{
+    text-align:center;
+    
+}
+.btn-inscription{
+    padding:10px 15px;
+    border:none;
+    margin-bottom: 24px;
+    background-color:#55AACE;
+    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius:20px;
+    font-weight: 600;
+    font-size: 24px;
+}
+@media(max-width: 425px){
+
+    #section-1{
+        width :85% ;
+        font-size: 10px;
+        padding-left: 20px;
+    }
+    #section-2 
+    {
+        background:none;
+        background-size:none;
+        height:none;
+        margin-top:none;
+        display:none;
+    
+    }
+    form{
+    flex-flow:column wrap;
+    }
+    body{
+        font-size:10px;
+    }
+    .slider{
+        margin-bottom: 0;
+    }
+    .titre h1{
+        text-align:left;
+        font-size:2em;
+    }
+    .titre h2{
+        text-align:left;
+        font-size:1.5em;
+    }
+    .img-inline{
+        flex-flow: column wrap;
+    }
+    section article {
+        font-size:14px;
+    }
+    section article h1{
+        font-size: 18px;
+    }
+    .btn-inscription{margin-top: 12px;}
+}

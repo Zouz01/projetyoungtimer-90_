@@ -1,0 +1,344 @@
+body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:inter-regular,sans-serif
+}
+header div, body, footer{
+  background:#A2A440
+}
+/********HEADER******/
+/* Barre nav */
+
+.barre-navigatrice {
+    width: 100%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    position:fixed;
+    top:0;
+    text-align: center;
+}
+.titre{
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:center;
+  color: #e2fa08;
+}
+
+/* Bouton-burger */
+
+.burger {
+  position: absolute;
+  left: 1220px;
+  top: 45px;
+}
+
+
+/* logo YoungTimer_PNG 1 */
+
+.logo{
+    text-align: left;
+}
+
+.titre h1{/* YoungTimer passion 90’ */
+  text-decoration-line: underline;
+  color: #e2fa08;
+  margin-right:20px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.header h2   { /* Youngtimer un jour youngtimer toujours */
+    color: #e2fa08 ;
+    margin-right:20px;
+    animation-duration: 4s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+    /* images header defilante*/
+
+    .slider {
+      width:100%;
+      display:flex;
+        margin: 0 auto 30px auto;
+        position: relative;
+      }
+      .slider-viewport {
+        width: 100%;
+        overflow: hidden;
+        margin:0 auto;
+      }
+      .slider-content {
+        display: grid;
+        grid-auto-flow: column;
+        transition: 2s all;
+      }
+      .slider-content img {
+        width: 1440px;
+        height: 700px;
+      }
+      .slider-nav {
+        position: relative;
+        bottom:50px;
+        width: 100%;
+        text-align: center;
+      }
+      .slider-nav a {
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        background-color: #0b28e3;
+        width: 15px;
+        height: 15px;
+        margin: 0 3px;
+      }
+      .slider-nav a:hover {
+        background-color: rgb(235, 31, 31);
+        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8);
+      }
+      #img2:target .slider-content {
+                transform: translateX(-1442px);
+      }
+      #img3:target .slider-content {
+                transform: translateX(-2900px);
+      }
+      @media screen and (min-width:1920px) {
+        .slider-content img {
+          width: 1920px;
+          height: 900px;
+        }
+        #img2:target .slider-content {
+          transform: translateX(-1920px);
+        }
+        #img3:target .slider-content {
+          transform: translateX(-3840px);
+        }
+      }
+
+     /*burger gauche deroulant*/
+
+
+      #wrap {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 35px;
+        margin: 0;
+        display: list-item;
+        position: absolute;
+        top:200px;
+        z-index:5;
+      }
+
+      #wrap:not(:target) {
+        transform: translate3d(-335px, 0, 0);
+      }
+
+      #wrap:target {
+        transform: translate3d(0, 0, 0);
+      }
+
+      #open,
+      #close {
+        height: 44px;
+        text-align: right;
+        display: block;
+        margin-right: -30px;
+      }
+
+      #wrap:target #open,
+      #wrap:not(:target) #close {
+        display: none;
+      }
+
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .header {
+        display:flex;
+        align-items: center;
+      }
+
+      .nav {
+        padding-left: 25px;
+        background-color:transparent;
+        line-height:40px;
+      }
+      ul{
+        list-style-type:none;
+      }
+
+      li::before {
+        content: "•"; color: #fff;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em
+      }
+
+      .main {
+        padding: 25px;
+        flex: 1;
+        display:inline-block;
+      }
+              /******FOOTER*******/    
+/* Pied de page */
+
+.footer {
+  background-color: #D9D9D9
+}
+
+
+.haut-page h2{
+  /* Youngtimer passion 90’ */
+  text-align: center;
+  opacity: 0.5;
+}
+
+.haut-page h3{
+  /* Sources de la page : */
+text-align: center;
+text-decoration-line: underline;
+
+color: rgba(0, 0, 0, 0.5);
+
+
+}
+.haut-page h4{
+  /* https://www.autotitre.com/fiche-technique/Peugeot/205/GTI_1.6_115ch https://gtipowers.com/histoire-de-la-205-gti-peugeot/#:~:text=transformation%20du%20Franc.)-,La%20locomotive,115%20ch%20puis%20130%20ch. https://fr.wikipedia.org/wiki/Volkswagen_Golf_I https://fr.wikipedia.org/wiki/Renault_Super_5_GT_Turbo */
+
+text-align: center;
+color: #000000;
+opacity: 0.5;
+}
+
+.reseaux{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:center;
+  align-items:center;
+ /*image logo+lien*/
+
+}
+.reseaux a{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:center;
+}
+.reseaux img{
+  width:25%;
+
+}
+.reseaux :not(:first-child){
+  width:15%;
+  height:80%;
+}
+
+.reseaux h4 {
+  /*liens des sources*/
+margin:auto 0;
+
+font-weight: 400;
+color: rgba(0, 0, 0, 0.5);
+}
+.logo-footer img{ /*rauis logo*/
+  position: absolute;
+  top:0;
+  left:0;
+  border-bottom-right-radius: 20px; 
+}
+.logo-footer{
+  position: absolute;
+}
+
+@media screen and (max-width:425px ) {
+
+  #img1 *, .slider-nav{display:none}
+  .slider{margin-bottom:120px;}
+
+  .barre-navigatrice{
+    position:fixed;
+    align-items: flex-start;
+    padding-top:20px;
+    background-color:#636363;
+    z-index:5;
+  }
+  .barre-navigatrice .logo{
+    width:27.5%;
+  }
+  .barre-navigatrice .logo img{
+    width:100%
+  }
+  .titre{
+    flex-flow:column wrap;
+    width:60%;
+    font-size:10px;
+    align-items:flex-start;
+    text-align:left;
+  }
+  .titre h1, .titre h2{
+    margin:0;
+  }
+  .burger{
+    width:27.5%;
+    position:initial;
+  }
+  #section-principale {
+    flex-flow:column-reverse wrap;
+    align-items: center;
+  }
+  #section-principale article{
+    width:80%;
+    border-radius:20px;
+    box-shadow:4px 8px 4px rgba(0, 0, 0, 0.5);
+  }
+  section article:not(:first-child){
+    margin-bottom: 20px;
+  }
+  footer .logo-footer img{
+    width: 80px;
+  }
+  footer .haut-page{
+    font-size:8px;
+  }
+  .reseaux a{
+    margin:0 auto;
+    width:80%;
+    height:80%;
+    font-size:10px;
+    align-items:center;
+  }
+  .reseaux :not(:first-child) {
+    margin:0 auto;
+    width:80%;
+    height:80%;
+  }
+  .reseaux img{
+    padding-right:10px;
+  }
+}
